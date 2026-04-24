@@ -1,38 +1,215 @@
-🌳
-Building Our Future Together
-Purpose Partners Capital Campaign
-Bishop Julia M. McMillan, Senior Pastor
-PHILIPPIANS 1:4–6
-purposepartners@newdawnrestoration.org
-
-"Thank you for your generous support! Your partnership reflects a shared responsibility—standing shoulder to shoulder in faith—advancing the work of the gospel from the first day until now."
-CONTACT INFORMATION
-FULL NAME
-PHONE NUMBER
-EMAIL ADDRESS
-All fields are required. Your information is kept confidential.
-PARTNERSHIP LEVEL
-LEGACY PARTNER
-MINI TREE
-$25,000
-5 lines · 25 chars
-FOUNDATION PARTNER
-STONE
-$15,000
-5 lines · 25 chars
-VISION PARTNER
-ACORN
-$10,000
-4 lines · 22 chars
-SEED PARTNER
-DOVE
-$5,000
-4 lines · 22 chars
-HARVEST PARTNER
-LEAF
-$1,000
-2 lines · 22 chars
-Select the partnership level that reflects your commitment to this vision.
-SUBMIT YOUR PARTNERSHIP
-Building Our Future Together · Purpose Partners Capital Campaign
-"Being confident of this, that he who began a good work in you will carry it on to completion until the day of Christ Jesus." — Philippians 1:6
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Building Our Future Together – Purpose Partners Capital Campaign</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --gold: #B8922A;
+    --gold-light: #D4AB4E;
+    --purple: #3B2A6E;
+    --purple-light: #5A4490;
+    --cream: #FDFAF5;
+    --warm-white: #FFFFFF;
+    --text: #2C2C2C;
+    --text-light: #666;
+    --border: #DDD4C0;
+    --success: #2E7D52;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--cream); font-family: 'Lato', sans-serif; color: var(--text); min-height: 100vh; }
+  .header { background: var(--warm-white); border-bottom: 3px solid var(--gold); padding: 36px 24px 28px; text-align: center; }
+  .logo-ring { width: 72px; height: 72px; border-radius: 50%; border: 2px solid var(--gold); display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; background: linear-gradient(135deg, #fff 60%, #f5edd8); font-size: 32px; }
+  .header h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(26px, 6vw, 42px); font-weight: 700; color: var(--purple); letter-spacing: 0.5px; line-height: 1.1; }
+  .header .subtitle { font-family: 'Cormorant Garamond', serif; font-size: clamp(16px, 3.5vw, 22px); color: var(--gold); font-style: italic; margin: 4px 0 10px; }
+  .header .pastor { font-size: 13px; color: var(--text-light); letter-spacing: 0.5px; }
+  .header .verse-ref { font-size: 12px; color: var(--gold); margin-top: 4px; letter-spacing: 1px; text-transform: uppercase; }
+  .divider { width: 60px; height: 2px; background: linear-gradient(to right, transparent, var(--gold), transparent); margin: 16px auto 0; }
+  .quote-banner { background: var(--purple); color: #e8e0f5; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: clamp(14px, 3vw, 17px); text-align: center; padding: 18px 28px; line-height: 1.6; }
+  .form-wrap { max-width: 600px; margin: 32px auto 60px; padding: 0 16px; }
+  .card { background: var(--warm-white); border-radius: 12px; box-shadow: 0 4px 24px rgba(59,42,110,0.09); overflow: hidden; border: 1px solid var(--border); }
+  .section { padding: 28px 28px 20px; border-bottom: 1px solid var(--border); }
+  .section:last-of-type { border-bottom: none; }
+  .section-title { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 600; color: var(--purple); letter-spacing: 2px; text-transform: uppercase; text-align: center; margin-bottom: 20px; }
+  .field { margin-bottom: 16px; }
+  label { display: block; font-size: 11px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; color: var(--text-light); margin-bottom: 6px; }
+  input[type="text"], input[type="email"], input[type="tel"] { width: 100%; padding: 12px 14px; border: 1.5px solid var(--border); border-radius: 6px; font-family: 'Lato', sans-serif; font-size: 15px; color: var(--text); background: var(--cream); transition: border-color 0.2s, box-shadow 0.2s; -webkit-appearance: none; }
+  input:focus { outline: none; border-color: var(--gold); box-shadow: 0 0 0 3px rgba(184,146,42,0.12); background: #fff; }
+  input.error { border-color: #c0392b; }
+  .field-note { font-size: 11px; color: var(--text-light); text-align: center; margin-top: -8px; margin-bottom: 4px; }
+  .levels-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin-bottom: 10px; }
+  .levels-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; max-width: 390px; margin: 0 auto; }
+  .level-btn { border: 2px solid var(--border); border-radius: 10px; padding: 14px 8px 12px; text-align: center; cursor: pointer; background: var(--cream); transition: all 0.2s; -webkit-tap-highlight-color: transparent; }
+  .level-btn:hover { border-color: var(--gold-light); background: #fdf7ec; }
+  .level-btn.selected { border-color: var(--gold); background: #fdf5e0; box-shadow: 0 0 0 3px rgba(184,146,42,0.15); }
+  .level-name { font-size: 10px; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; color: var(--text-light); margin-bottom: 4px; }
+  .level-badge { display: inline-block; font-size: 9px; letter-spacing: 0.5px; text-transform: uppercase; color: var(--purple-light); font-weight: 700; margin-bottom: 2px; }
+  .level-amount { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 700; color: var(--gold); line-height: 1; }
+  .level-lines { font-size: 10px; color: var(--text-light); margin-top: 4px; }
+  .level-hint { font-size: 12px; color: var(--text-light); text-align: center; margin-top: 10px; }
+  #engrave-section { display: none; }
+  .engrave-intro { font-size: 13px; color: var(--text-light); text-align: center; margin-bottom: 18px; line-height: 1.5; }
+  .engrave-block { margin-bottom: 6px; }
+  .char-count { font-size: 11px; text-align: right; margin-top: 3px; color: var(--text-light); }
+  .char-count.over { color: #c0392b; font-weight: 700; }
+  .engrave-preview { margin-top: 20px; background: #f0ebe0; border: 1px dashed var(--gold); border-radius: 8px; padding: 16px; text-align: center; }
+  .engrave-preview-label { font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-light); margin-bottom: 10px; }
+  .engrave-preview-text { font-family: 'Cormorant Garamond', serif; font-size: 17px; color: var(--purple); line-height: 1.7; min-height: 28px; white-space: pre-wrap; word-break: break-all; }
+  .submit-section { padding: 24px 28px 28px; text-align: center; }
+  .submit-btn { display: inline-block; background: var(--purple); color: #fff; font-family: 'Lato', sans-serif; font-size: 15px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 16px 48px; border: none; border-radius: 8px; cursor: pointer; transition: background 0.2s, transform 0.1s, box-shadow 0.2s; width: 100%; max-width: 320px; box-shadow: 0 4px 16px rgba(59,42,110,0.25); }
+  .submit-btn:hover { background: var(--purple-light); box-shadow: 0 6px 20px rgba(59,42,110,0.35); }
+  .submit-btn:active { transform: scale(0.98); }
+  .submit-btn:disabled { background: #aaa; cursor: not-allowed; box-shadow: none; transform: none; }
+  .error-msg { color: #c0392b; font-size: 12px; margin-top: 10px; display: none; }
+  #success-screen { display: none; text-align: center; padding: 52px 28px; }
+  .success-icon { font-size: 52px; margin-bottom: 16px; }
+  .success-title { font-family: 'Cormorant Garamond', serif; font-size: 28px; color: var(--purple); margin-bottom: 10px; }
+  .success-msg { font-size: 14px; color: var(--text-light); line-height: 1.7; max-width: 380px; margin: 0 auto 20px; }
+  .success-email { font-size: 13px; color: var(--gold); font-weight: 700; }
+  .footer { text-align: center; padding: 24px 16px; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 14px; color: var(--text-light); line-height: 1.7; }
+  .footer strong { display: block; font-size: 12px; font-style: normal; font-family: 'Lato', sans-serif; letter-spacing: 0.5px; color: var(--purple); margin-bottom: 6px; }
+  @media (max-width: 420px) { .section { padding: 22px 18px 16px; } .levels-grid { grid-template-columns: 1fr 1fr; } .submit-section { padding: 20px 18px 24px; } }
+</style>
+</head>
+<body>
+<div class="header">
+  <div class="logo-ring">🌳</div>
+  <h1>Building Our Future Together</h1>
+  <div class="subtitle">Purpose Partners Capital Campaign</div>
+  <div class="pastor">Bishop Julia M. McMillan, Senior Pastor</div>
+  <div class="verse-ref">Philippians 1:4–6</div>
+  <div style="margin-top: 8px;"><a href="mailto:purposepartners@newdawnrestoration.org" style="font-size: 13px; color: var(--gold); text-decoration: none; letter-spacing: 0.3px;">purposepartners@newdawnrestoration.org</a></div>
+  <div class="divider"></div>
+</div>
+<div class="quote-banner">
+  "Thank you for your generous support! Your partnership reflects a shared responsibility—standing shoulder to shoulder in faith—advancing the work of the gospel from the first day until now."
+</div>
+<div class="form-wrap">
+<div class="card">
+  <div class="section">
+    <div class="section-title">Contact Information</div>
+    <div class="field"><label for="fullName">Full Name</label><input type="text" id="fullName" placeholder="Your full name" autocomplete="name"></div>
+    <div class="field"><label for="phone">Phone Number</label><input type="tel" id="phone" placeholder="(000) 000-0000" autocomplete="tel"></div>
+    <div class="field"><label for="email">Email Address</label><input type="email" id="email" placeholder="you@example.com" autocomplete="email"></div>
+    <p class="field-note">All fields are required. Your information is kept confidential.</p>
+  </div>
+  <div class="section">
+    <div class="section-title">Partnership Level</div>
+    <div class="levels-grid">
+      <div class="level-btn" data-level="Legacy Partner – Mini Tree" data-amount="25000" data-lines="5" data-maxchars="25" onclick="selectLevel(this)"><div class="level-badge">Legacy Partner</div><div class="level-name">Mini Tree</div><div class="level-amount">$25,000</div><div class="level-lines">5 lines · 25 chars</div></div>
+      <div class="level-btn" data-level="Foundation Partner – Stone" data-amount="15000" data-lines="5" data-maxchars="25" onclick="selectLevel(this)"><div class="level-badge">Foundation Partner</div><div class="level-name">Stone</div><div class="level-amount">$15,000</div><div class="level-lines">5 lines · 25 chars</div></div>
+      <div class="level-btn" data-level="Vision Partner – Acorn" data-amount="10000" data-lines="4" data-maxchars="22" onclick="selectLevel(this)"><div class="level-badge">Vision Partner</div><div class="level-name">Acorn</div><div class="level-amount">$10,000</div><div class="level-lines">4 lines · 22 chars</div></div>
+    </div>
+    <div class="levels-grid-2">
+      <div class="level-btn" data-level="Seed Partner – Dove" data-amount="5000" data-lines="4" data-maxchars="22" onclick="selectLevel(this)"><div class="level-badge">Seed Partner</div><div class="level-name">Dove</div><div class="level-amount">$5,000</div><div class="level-lines">4 lines · 22 chars</div></div>
+      <div class="level-btn" data-level="Harvest Partner – Leaf" data-amount="1000" data-lines="2" data-maxchars="22" onclick="selectLevel(this)"><div class="level-badge">Harvest Partner</div><div class="level-name">Leaf</div><div class="level-amount">$1,000</div><div class="level-lines">2 lines · 22 chars</div></div>
+    </div>
+    <p class="level-hint">Select the partnership level that reflects your commitment to this vision.</p>
+  </div>
+  <div class="section" id="engrave-section">
+    <div class="section-title">Engraving Message</div>
+    <p class="engrave-intro">Please enter your engraving exactly as it should appear.<br>Each line must stay within the character limit.</p>
+    <div id="engrave-fields"></div>
+    <div class="engrave-preview"><div class="engrave-preview-label">Live Preview</div><div class="engrave-preview-text" id="preview-text">—</div></div>
+  </div>
+  <div class="submit-section" id="submit-section">
+    <button class="submit-btn" id="submitBtn" onclick="submitForm()">Submit Your Partnership</button>
+    <div class="error-msg" id="errorMsg">Please fill in all required fields before submitting.</div>
+  </div>
+  <div id="success-screen">
+    <div class="success-icon">🙏</div>
+    <div class="success-title">Thank You for Your Partnership!</div>
+    <p class="success-msg">Your commitment has been received. We are grateful for your generosity and your faithfulness in advancing the work of the gospel.</p>
+    <p class="success-email">Questions? Contact us at<br><a href="mailto:purposepartners@newdawnrestoration.org" style="color: inherit;">purposepartners@newdawnrestoration.org</a></p>
+  </div>
+</div>
+</div>
+<div class="footer">
+  <strong>Building Our Future Together · Purpose Partners Capital Campaign</strong>
+  "Being confident of this, that he who began a good work in you will carry it on to completion until the day of Christ Jesus." — Philippians 1:6
+</div>
+<script>
+  let selectedLevel = null;
+  function selectLevel(el) {
+    document.querySelectorAll('.level-btn').forEach(b => b.classList.remove('selected'));
+    el.classList.add('selected');
+    const lines = parseInt(el.dataset.lines);
+    const maxChars = parseInt(el.dataset.maxchars);
+    selectedLevel = { name: el.dataset.level, lines, maxChars };
+    buildEngraveFields(lines, maxChars);
+    document.getElementById('engrave-section').style.display = 'block';
+    document.getElementById('engrave-section').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+  function buildEngraveFields(lines, maxChars) {
+    const container = document.getElementById('engrave-fields');
+    container.innerHTML = '';
+    for (let i = 1; i <= lines; i++) {
+      const div = document.createElement('div');
+      div.className = 'engrave-block';
+      const lbl = document.createElement('label');
+      lbl.setAttribute('for', `eline${i}`);
+      lbl.textContent = `Line ${i} (max ${maxChars} characters)`;
+      const inp = document.createElement('input');
+      inp.type = 'text';
+      inp.id = `eline${i}`;
+      inp.maxLength = maxChars;
+      inp.placeholder = `Line ${i}`;
+      inp.dataset.max = maxChars;
+      inp.addEventListener('input', updatePreview);
+      const counter = document.createElement('div');
+      counter.className = 'char-count';
+      counter.id = `count${i}`;
+      counter.textContent = `0 / ${maxChars}`;
+      inp.addEventListener('input', () => {
+        const len = inp.value.length;
+        counter.textContent = `${len} / ${maxChars}`;
+        counter.classList.toggle('over', len > maxChars);
+      });
+      div.appendChild(lbl); div.appendChild(inp); div.appendChild(counter);
+      container.appendChild(div);
+    }
+    updatePreview();
+  }
+  function updatePreview() {
+    if (!selectedLevel) return;
+    const parts = [];
+    for (let i = 1; i <= selectedLevel.lines; i++) {
+      const el = document.getElementById(`eline${i}`);
+      if (el) parts.push(el.value || '');
+    }
+    document.getElementById('preview-text').textContent = parts.join('\n').trim() || '—';
+  }
+  function formatPhone(input) {
+    input.addEventListener('input', () => {
+      let v = input.value.replace(/\D/g, '');
+      if (v.length >= 10) v = v.slice(0, 10);
+      if (v.length > 6) v = `(${v.slice(0,3)}) ${v.slice(3,6)}-${v.slice(6)}`;
+      else if (v.length > 3) v = `(${v.slice(0,3)}) ${v.slice(3)}`;
+      else if (v.length > 0) v = `(${v}`;
+      input.value = v;
+    });
+  }
+  formatPhone(document.getElementById('phone'));
+  function submitForm() {
+    const name = document.getElementById('fullName').value.trim();
+    const phone = document.getElementById('phone').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const errEl = document.getElementById('errorMsg');
+    if (!name || !phone || !email) { errEl.textContent = 'Please complete all contact fields.'; errEl.style.display = 'block'; return; }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { errEl.textContent = 'Please enter a valid email address.'; errEl.style.display = 'block'; return; }
+    if (!selectedLevel) { errEl.textContent = 'Please select a partnership level.'; errEl.style.display = 'block'; return; }
+    for (let i = 1; i <= selectedLevel.lines; i++) {
+      const el = document.getElementById(`eline${i}`);
+      if (el && el.value.length > selectedLevel.maxChars) { errEl.textContent = `Line ${i} of your engraving exceeds the character limit.`; errEl.style.display = 'block'; return; }
+    }
+    errEl.style.display = 'none';
+    document.querySelectorAll('.section, .submit-section').forEach(s => s.style.display = 'none');
+    const success = document.getElementById('success-screen');
+    success.style.display = 'block';
+    success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+</script>
+</body>
+</html>
